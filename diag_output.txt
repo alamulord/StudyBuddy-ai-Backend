@@ -1,0 +1,7 @@
+Using URL: https://tajnpoyquheysjmivgzo.supabase.co
+Key type: service_role
+Available buckets: ['materials']
+'materials' bucket exists.
+Attempting test upload...
+Test upload success: UploadResponse(path='test/test_file.txt', full_path='materials/test/test_file.txt', fullPath='materials/test/test_file.txt')
+Test cleanup success.

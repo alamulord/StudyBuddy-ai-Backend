@@ -1,0 +1,124 @@
+Process material raised: [Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    raise exc
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\httpcore\_sync\connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\httpcore\_backends\sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\debug_process.py", line 17, in debug_process
+    await process_material(material_id, supabase)
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\app\services\processing.py", line 215, in process_material
+    }).eq("id", material_id).execute()
+                             ~~~~~~~^^
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\postgrest\_sync\request_builder.py", line 47, in execute
+    r = self.request.send()
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\postgrest\base_request_builder.py", line 81, in send
+    return self.session.request(
+           ~~~~~~~~~~~~~~~~~~~~^
+        self.http_method,
+        ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        auth=self.auth,
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\httpx\_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Aliyu\Documents\StudyBuddy\studyBuddy_main\studyBuddy-backend\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+[08:52:33.289643] Soft delete success for material: d8e6f653-3b52-40d3-bf28-a3f6745f03ff
+[08:52:51.627047] Soft delete success for material: d98caeba-82f2-48ff-a686-a908ca531035
+[08:52:54.700508] Soft delete success for material: e8bd3270-6ff5-432d-ab67-3ec766a783bd
+[08:53:00.630571] Soft delete success for material: 90b7842e-4f3d-4cc2-9331-ff898280b7f5
+[08:53:05.539473] Soft delete success for material: 4b8d3f19-c603-4457-8ffa-8921354fcb4e
+[08:53:22.953740] Soft delete success for material: b8579ed5-85cc-4ab8-a3db-bbebd2408235
+[08:53:31.751746] Soft delete success for material: ff746283-d3f6-4ba9-a4fb-ce8de119e506
+[08:53:40.663484] Soft delete success for material: ff746283-d3f6-4ba9-a4fb-ce8de119e506
+[08:54:34.626222] Soft delete success for material: c986c638-e4ef-42f0-9976-5c6ca3d95b2a
+[08:54:43.854737] Soft delete success for material: 0abf6fc0-29f0-4130-80a3-fe4c13f18896
+[08:54:57.619956] Soft delete success for material: e563b47b-5290-425f-b128-e41f10f168b2
+[08:54:58.717745] Soft delete success for material: 1af4f8c8-e8df-458d-a8dc-101023268446
+[08:55:45.855817] Soft delete success for material: dda038ee-fe7b-4c1f-8d51-661bd5aaa6ef
+[08:55:45.895313] Soft delete success for material: 91bf027b-6855-4f5a-916f-8d0dc70c5e66
+[08:56:34.845759] Soft delete success for material: 4058633a-df40-49e9-bf2b-e4c69cd75669
+[08:56:36.904073] Soft delete success for material: 2bb72a76-e552-491c-a72c-ad6625760bd8
+[08:56:49.485479] Soft delete success for material: 2bb72a76-e552-491c-a72c-ad6625760bd8
+[08:56:57.169373] Soft delete success for material: 91cf3d04-c59a-4b45-8a8e-5aee1dbc1f3f
+[08:57:14.888064] Soft delete success for material: 1df3e82a-828f-4835-983b-890d0c5fb368
+[08:57:15.556532] Soft delete success for material: 625a81cb-b7d5-40f8-84da-6f812e76428f
+[08:57:19.538231] Soft delete success for material: c9467314-91e2-43a2-a328-c917f0246ae2
+[08:57:24.114590] Soft delete success for material: 76952898-5511-4d55-bbfc-9220fe418668
+[08:57:28.189494] Soft delete success for material: cfa93de0-7fec-4408-8782-bcf22cefa33b
+[08:57:30.245575] Soft delete success for material: 1160d597-efb0-4d84-a794-cbbafa00e43f
+[08:57:47.666773] Soft delete success for material: 3bf0c19a-da37-44da-b99f-8b08b3c57ac3
+[08:57:50.622089] Soft delete success for material: 0d33a171-0621-4559-9d0c-441d6be0114c
+[08:57:53.390935] Soft delete success for material: 97f8e86b-00e8-420c-95e0-0fb8751efd7a
+[08:57:57.501964] Soft delete success for material: 18f665f0-deca-4ed8-8c5b-c55b935f4a1e
+[08:58:01.798942] Soft delete success for material: be250778-ea94-4736-a88e-04fdf8106062
+[08:58:02.284526] Soft delete success for material: b3b1285a-3e02-4bba-b2e7-02f9278406ac
+[08:58:40.094222] Soft delete success for material: ec60e87d-d4ed-47e3-8482-870ae9bbce25
+[08:59:07.418725] Soft delete success for material: c11589b8-b061-4f21-a8d5-e4cf46110667
+[08:59:07.418938] Soft delete success for material: c4583222-7522-43be-8aa6-f719e0b6986d
+[08:59:07.515818] Soft delete success for material: 5d3f7842-a20c-4ef9-80bc-854c3d5ab126
+[13:34:42.947549] Soft delete success for material: 433e6c0e-6217-42f3-aad2-8eb24785affb
+[13:34:45.136472] Soft delete success for material: 85099f93-4306-4234-a13c-4bef0b7399b1
+[13:34:47.700823] Soft delete success for material: 5d763f42-0e41-4487-8096-1ed9ac877526
+[13:34:51.033595] Soft delete success for material: 8b853c8d-8865-4860-b8c9-3cf329b5320f
+[04:55:09.462308] Soft delete success for material: 01fc9541-61e5-4630-9009-e07ab1386733
+[04:55:13.459793] Soft delete success for material: 9a38500a-6c6a-4c07-b85a-3a330a97fdc0
+[04:55:17.240144] Soft delete success for material: 87d50d72-d847-4969-9a79-c7e62fe53d6b
+[05:26:30.531118] Soft delete success for material: e6cbd6a2-67e2-4a12-801f-1687a7699520
+[05:34:55.802269] Soft delete success for material: 88798398-3449-46ea-841e-42162aa9cd01
+[14:08:26.482384] Soft delete success for material: f9c22531-b83b-4b70-866c-cbc06a20ed87
+[14:08:28.621687] Soft delete success for material: 54ad7468-d542-4a0b-af09-03e703da6bf6
+[14:08:35.013185] Soft delete success for material: 1afeb7bc-c805-4959-9eef-a63cd6ff428d
+[14:08:38.034290] Soft delete success for material: 9a638f20-fb03-4458-a53a-7da3c8c6c4a0
+[14:08:42.745078] Soft delete success for material: 44fc5876-ab7a-4d1b-b70d-707c40d9da08

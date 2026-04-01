@@ -1,0 +1,11 @@
+Testing DELETE request...
+DELETE /api/v1/materials/12345 -> Status: 401
+
+Listing Material Routes:
+/api/v1/materials/upload {'POST'}
+/api/v1/materials/{material_id} {'GET'}
+/api/v1/materials/ {'GET'}
+/api/v1/materials/{material_id} {'DELETE'}
+/api/v1/materials/{material_id}/restore {'POST'}
+/api/v1/materials/{material_id}/permanent {'DELETE'}
+/api/v1/materials/{material_id} {'PATCH'}

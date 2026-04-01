@@ -1,0 +1,24 @@
+{'GET', 'HEAD'} /openapi.json
+{'GET', 'HEAD'} /docs
+{'GET', 'HEAD'} /docs/oauth2-redirect
+{'GET', 'HEAD'} /redoc
+{'GET'} /api/v1/auth/me
+{'GET'} /api/v1/dashboard/stats
+{'POST'} /api/v1/materials/upload
+{'DELETE'} /api/v1/materials/{material_id}/archive
+{'DELETE'} /api/v1/materials/{material_id}/permanent
+{'GET'} /api/v1/materials/{material_id}
+{'POST'} /api/v1/materials/{material_id}/restore
+{'GET'} /api/v1/materials/
+{'PATCH'} /api/v1/materials/{material_id}
+{'GET'} /api/v1/settings/
+{'PUT'} /api/v1/settings/
+{'GET'} /api/v1/flashcards/{material_id}
+{'PUT'} /api/v1/flashcards/update/{flashcard_id}
+{'GET'} /api/v1/progress/
+{'POST'} /api/v1/quizzes/generate
+{'GET'} /api/v1/quizzes/{quiz_id}
+{'POST'} /api/v1/quizzes/{quiz_id}/submit
+{'GET'} /api/v1/quizzes/attempts/recent
+{'POST'} /api/v1/teach-back/evaluate
+{'GET'} /

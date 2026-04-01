@@ -1,0 +1,36 @@
+
+=== Checking Table: materials ===
+Table 'materials' EXISTS.
+  Column 'id': OK
+  Column 'user_id': OK
+  Column 'title': OK
+  Column 'subject': OK
+  Column 'type': OK
+  Column 'storage_path': OK
+  Column 'status': OK
+  Column 'goal': MISSING or ERROR ({'message': 'column materials.goal does not exist', 'code': '42703', 'hint': None, 'details': None})
+  Column 'exam_date': MISSING or ERROR ({'message': 'column materials.exam_date does not exist', 'code': '42703', 'hint': None, 'details': None})
+  Column 'summary': OK
+  Column 'transcription': OK
+
+=== Checking Table: user_stats ===
+Table 'user_stats' EXISTS.
+  Column 'user_id': OK
+  Column 'exam_readiness': OK
+  Column 'current_streak': OK
+  Column 'best_streak': OK
+  Column 'mastery_score': OK
+
+=== Checking Table: user_settings ===
+Table 'user_settings' MISSING or ERROR: {'message': "Could not find the table 'public.user_settings' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.user_stats'", 'details': None}
+
+=== Checking Table: flashcards ===
+Table 'flashcards' EXISTS.
+  Column 'id': OK
+  Column 'material_id': MISSING or ERROR ({'message': 'column flashcards.material_id does not exist', 'code': '42703', 'hint': None, 'details': None})
+  Column 'user_id': OK
+  Column 'front': OK
+  Column 'back': OK
+  Column 'interval': MISSING or ERROR ({'message': 'column flashcards.interval does not exist', 'code': '42703', 'hint': None, 'details': None})
+  Column 'repetition': MISSING or ERROR ({'message': 'column flashcards.repetition does not exist', 'code': '42703', 'hint': None, 'details': None})
+  Column 'easiness_factor': MISSING or ERROR ({'message': 'column flashcards.easiness_factor does not exist', 'code': '42703', 'hint': None, 'details': None})

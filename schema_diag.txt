@@ -1,0 +1,7 @@
+Checking tables: ['materials', 'user_stats', 'focus_areas', 'study_activities', 'flashcards', 'user_settings']
+Table 'materials': EXISTS (count: 0)
+Table 'user_stats': EXISTS (count: 0)
+Table 'focus_areas': EXISTS (count: 0)
+Table 'study_activities': EXISTS (count: 0)
+Table 'flashcards': EXISTS (count: 0)
+Table 'user_settings': ERROR/MISSING ({'message': "Could not find the table 'public.user_settings' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.user_stats'", 'details': None})
